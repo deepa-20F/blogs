@@ -8,7 +8,7 @@ export function Footer() {
           <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#CFE8DF] opacity-50 blur-3xl" />
           <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-[#F6EFE4] opacity-70 blur-3xl" />
 
-          <div className="relative grid gap-12 md:grid-cols-4">
+          <div className="relative grid gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2">
                 <span className="gradient-primary grid h-10 w-10 place-items-center rounded-full font-display text-lg text-white shadow-soft">L</span>

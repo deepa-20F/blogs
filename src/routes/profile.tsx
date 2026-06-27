@@ -85,18 +85,18 @@ function ProfilePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-20 sm:px-6">
       {/* Header card */}
-      <div className="glass-strong relative overflow-hidden rounded-[2rem] p-8 dark:bg-[rgba(28,46,42,0.82)] dark:border-white/10">
+      <div className="glass-strong relative overflow-hidden rounded-[2rem] p-6 sm:p-8 dark:bg-[rgba(28,46,42,0.82)] dark:border-white/10">
         <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#CFE8DF]/60 blur-3xl dark:bg-[#1e3830]/60" />
         <div className="relative flex flex-wrap items-center gap-6">
           {/* Avatar */}
-          <div className="gradient-primary grid h-20 w-20 shrink-0 place-items-center rounded-full text-2xl font-bold text-white shadow-luxe">
+          <div className="gradient-primary grid h-16 w-16 sm:h-20 sm:w-20 shrink-0 place-items-center rounded-full text-xl sm:text-2xl font-bold text-white shadow-luxe">
             {initials}
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-xs font-semibold uppercase tracking-wider text-[#3F6E67]">
               @{profile?.username ?? "member"}
             </p>
-            <h1 className="mt-0.5 font-display text-3xl text-foreground">
+            <h1 className="mt-0.5 font-display text-2xl sm:text-3xl text-foreground">
               {profile?.full_name ?? user.email}
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">{user.email}</p>
@@ -106,19 +106,19 @@ function ProfilePage() {
           </div>
           <button
             onClick={async () => { await signOut(); navigate({ to: "/" }); }}
-            className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-red-300 hover:text-red-500 dark:border-white/10"
+            className="flex items-center gap-2 rounded-full border border-border px-3 py-2 sm:px-4 text-sm text-muted-foreground transition-colors hover:border-red-300 hover:text-red-500 dark:border-white/10"
           >
-            <LogOut className="h-4 w-4" /> Sign out
+            <LogOut className="h-4 w-4" /> <span className="hidden sm:inline">Sign out</span>
           </button>
         </div>
 
         {/* Tabs */}
-        <div className="relative mt-8 flex gap-1 overflow-x-auto scrollbar-hide">
+        <div className="relative mt-6 flex gap-1 overflow-x-auto scrollbar-hide">
           {tabs.map((t) => (
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className={`inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
+              className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm font-medium transition-all ${
                 tab === t.id
                   ? "gradient-primary text-white shadow-soft"
                   : "text-foreground/70 hover:bg-white/60 dark:hover:bg-white/10"

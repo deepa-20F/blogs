@@ -16,7 +16,7 @@ export const Route = createFileRoute("/categories")({
 function CategoriesPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
-      <header className="mx-auto max-w-3xl py-10 text-center">
+      <header className="mx-auto max-w-3xl py-8 sm:py-10 text-center">
         <p className="text-xs font-semibold uppercase tracking-wider text-[#3F6E67]">Explore</p>
         <h1 className="mt-3 font-display text-[clamp(2.4rem,5vw,3.6rem)] leading-tight">
           A gentle taxonomy.
@@ -25,7 +25,7 @@ function CategoriesPage() {
           Every story lives somewhere quiet. Pick a room.
         </p>
       </header>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((c, i) => (
           <Link
             key={c.name}

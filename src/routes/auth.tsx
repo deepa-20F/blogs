@@ -527,7 +527,7 @@ function AuthPage() {
           </Link>
         </div>
 
-        <div className="glass-strong rounded-[2rem] p-8 shadow-luxe dark:bg-[rgba(28,46,42,0.82)] dark:border-white/10">
+        <div className="glass-strong rounded-[2rem] p-6 sm:p-8 shadow-luxe dark:bg-[rgba(28,46,42,0.82)] dark:border-white/10">
           {mode === "signin" ? (
             <SignInForm onSwitch={() => setMode("signup")} />
           ) : (

@@ -84,7 +84,7 @@ function Home() {
     : null;
 
   return (
-    <div className="space-y-32 pb-10">
+    <div className="space-y-16 pb-10 sm:space-y-32">
       <Hero />
       <SearchBar q={q} setQ={setQ} />
       {filtered ? (
@@ -104,7 +104,7 @@ function Home() {
 function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6">
-      <div className="relative overflow-hidden rounded-[2.5rem] glass-strong dark:bg-[rgba(28,46,42,0.82)] dark:border-white/10 p-12 sm:p-20 text-center">
+      <div className="relative overflow-hidden rounded-[2rem] glass-strong dark:bg-[rgba(28,46,42,0.82)] dark:border-white/10 p-8 sm:p-20 text-center">
         <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#CFE8DF] opacity-40 blur-3xl animate-blob" />
         <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-[#D7B66A]/30 blur-3xl animate-blob" style={{ animationDelay: "-8s" }} />
         <div className="relative">
@@ -133,11 +133,11 @@ function Hero() {
               Start writing
             </Link>
           </div>
-          <div className="mt-12 flex justify-center gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             {stats.map((s) => (
-              <div key={s.label} className="glass rounded-2xl px-6 py-4 text-center">
-                <p className="font-display text-2xl text-foreground">{s.value}</p>
-                <p className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">{s.label}</p>
+              <div key={s.label} className="glass rounded-2xl px-5 py-3 text-center">
+                <p className="font-display text-xl text-foreground">{s.value}</p>
+                <p className="mt-0.5 text-[11px] uppercase tracking-wider text-muted-foreground">{s.label}</p>
               </div>
             ))}
           </div>
@@ -322,7 +322,7 @@ function Newsletter() {
   const [done, setDone] = useState(false);
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6">
-      <div className="glass-strong noise relative overflow-hidden rounded-[2.5rem] p-10 sm:p-16">
+      <div className="glass-strong noise relative overflow-hidden rounded-[2rem] p-7 sm:p-16">
         <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#CFE8DF] opacity-60 blur-3xl animate-blob" />
         <div className="absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-[#EAE7F8] opacity-60 blur-3xl animate-blob" style={{ animationDelay: "-8s" }} />
         <div className="absolute right-10 top-10 h-24 w-24 rounded-full bg-[#D7B66A]/30 blur-2xl animate-pulse-glow" />

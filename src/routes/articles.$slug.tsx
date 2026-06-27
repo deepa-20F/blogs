@@ -156,8 +156,8 @@ function ArticlePage() {
       </div>
 
       {/* Actions bar */}
-      <div className="mx-auto mt-12 flex max-w-2xl items-center justify-between border-y border-black/5 dark:border-white/10 py-5">
-        <div className="flex items-center gap-2">
+      <div className="mx-auto mt-12 flex max-w-2xl flex-wrap items-center justify-between gap-3 border-y border-black/5 dark:border-white/10 py-5">
+        <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={toggleLike}
             title={!isLoggedIn ? "Sign in to like" : undefined}

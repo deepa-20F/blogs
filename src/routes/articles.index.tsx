@@ -70,7 +70,7 @@ function ArticlesPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
-      <header className="mx-auto max-w-3xl py-10 text-center">
+      <header className="mx-auto max-w-3xl py-8 sm:py-10 text-center">
         <p className="text-xs font-semibold uppercase tracking-wider text-[#3F6E67]">The Library</p>
         <h1 className="mt-3 font-display text-[clamp(2.4rem,5vw,3.6rem)] leading-tight text-foreground">
           Every essay, beautifully kept.
